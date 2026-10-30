@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Reserva - Controle de Estacionamento</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Controle de Estacionamento</h1>
+    <nav>
+      <a href="index.html" class="ativo">Cadastro de Reserva</a>
+      <a href="vagas.html">Vagas Cadastradas</a>
+      <a href="disponiveis.html">Vagas Disponiveis</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Cadastro de reserva de vaga</h2>
+      <form id="form-reserva">
+        <div class="form-grid">
+          <div class="campo">
+            <label for="placa">Placa do veiculo</label>
+            <input type="text" id="placa" name="placa" maxlength="8" placeholder="ABC1D23" required>
+          </div>
+          <div class="campo">
+            <label for="proprietario">Nome do proprietario</label>
+            <input type="text" id="proprietario" name="proprietario" required>
+          </div>
+          <div class="campo">
+            <label for="apartamento">Numero do apartamento</label>
+            <input type="text" id="apartamento" name="apartamento" required>
+          </div>
+          <div class="campo">
+            <label for="bloco">Bloco do apartamento</label>
+            <input type="text" id="bloco" name="bloco" maxlength="3" required>
+          </div>
+          <div class="campo">
+            <label for="modelo">Modelo do veiculo</label>
+            <input type="text" id="modelo" name="modelo" required>
+          </div>
+          <div class="campo">
+            <label for="cor">Cor do veiculo</label>
+            <input type="text" id="cor" name="cor" required>
+          </div>
+          <div class="campo">
+            <label for="vaga">Numero da vaga</label>
+            <select id="vaga" name="vaga" required></select>
+          </div>
+        </div>
+
+        <div class="acoes">
+          <button type="submit" class="btn-salvar">Salvar</button>
+          <button type="reset" class="btn-limpar">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/model/ReservaModel.js"></script>
+  <script src="js/view/ReservaView.js"></script>
+  <script src="js/controller/CadastroController.js"></script>
+</body>
+</html>

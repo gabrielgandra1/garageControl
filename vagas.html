@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vagas Cadastradas - Controle de Estacionamento</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Controle de Estacionamento</h1>
+    <nav>
+      <a href="index.html">Cadastro de Reserva</a>
+      <a href="vagas.html" class="ativo">Vagas Cadastradas</a>
+      <a href="disponiveis.html">Vagas Disponiveis</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Vagas cadastradas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Vaga</th>
+            <th>Placa</th>
+            <th>Proprietario</th>
+            <th>Apto</th>
+            <th>Bloco</th>
+            <th>Modelo</th>
+            <th>Cor</th>
+            <th>Acao</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/model/ReservaModel.js"></script>
+  <script src="js/view/ReservaView.js"></script>
+  <script src="js/controller/ListaController.js"></script>
+</body>
+</html>
